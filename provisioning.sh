@@ -13,7 +13,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update
 
 # Packages & Applications Install
-
+brew tap Homebrew/bundle
+brew bundle
 
 # Setting dotfiles
 git clone https://github.com/Tamrin007/dotfiles ~/.dotfiles
