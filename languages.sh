@@ -12,10 +12,10 @@ exec $SHELL -l
 
 # Versions
 rb_ver="2.3.1"
-py_ver="3.5.1"
-php_ver="7.0.7"
-nd_ver="6.2.2"
-go_ver="1.6"
+py_ver="3.5.2"
+php_ver="7.0.11"
+nd_ver="6.6.0"
+go_ver="1.7"
 
 # Install Languages
 rbenv install ${rb_ver}
