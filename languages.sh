@@ -2,13 +2,13 @@
 
 # Install *envs
 git clone https://github.com/riywo/anyenv ~/.anyenv
-exec $SHELL -l
+source .zshrc
 anyenv install rbenv
 anyenv install pyenv
 anyenv install phpenv
 anyenv install ndenv
 anyenv install goenv
-exec $SHELL -l
+source .zshrc
 
 # Versions
 rb_ver="2.3.1"
@@ -33,4 +33,4 @@ ndenv rehash
 goenv install ${go_ver}
 goenv global ${go_ver}
 goenv rehash
-exec $SHELL -l
+source .zshrc
