@@ -7,6 +7,6 @@ cd ~/.dotfiles
 cd
 
 # Install zplug
-curl -sL get.zplug.sh | zsh
+curl -sL zplug.sh/installer | zsh
 echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells
 chpass -s /usr/local/bin/zsh
