@@ -23,7 +23,7 @@ rbenv rehash
 pyenv install ${py_ver}
 pyenv global ${py_ver}
 pyenv rehash
-phpenv install ${php_ver}
+PHP_BUILD_CONFIGURE_OPTS="--with-openssl=$(brew --prefix openssl) --with-libxml-dir=$(brew --prefix libxml2)" PHP_BUILD_EXTRA_MAKE_ARGUMENTS=-j4 phpenv install ${php_ver}
 phpenv global ${php_ver}
 phpenv rehash
 ndenv install ${nd_ver}
