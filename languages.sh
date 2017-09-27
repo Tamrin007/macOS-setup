@@ -15,3 +15,6 @@ goenv global 1.9.0
 
 nodenv install 8.5.0
 nodnev global 8.5.0
+
+jenv add $(/usr/libexec/java_home -v 1.8)
+jenv global 9
