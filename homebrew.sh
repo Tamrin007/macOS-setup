@@ -1,9 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
-# Homebrew Install
+set -eu
+
+# Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
+brew upgrade
 
-# Packages & Applications Install
-brew tap Homebrew/bundle
-brew bundle
+# Install brew-file
+brew install rcmdnk/file/brew-file
+
+# Install listed packages
+brew file install

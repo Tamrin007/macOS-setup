@@ -1,35 +1,17 @@
-#!/usr/local/bin/zsh
+#!/bin/bash
 
-# Install *envs
-git clone https://github.com/riywo/anyenv ~/.anyenv
-anyenv install rbenv
-anyenv install pyenv
-anyenv install phpenv
-anyenv install ndenv
-anyenv install goenv
-export PATH="$HOME/.anyenv/bin:$PATH"
+set -eu
 
-# Versions
-rb_ver="2.3.1"
-py_ver="3.5.2"
-php_ver="7.0.11"
-nd_ver="6.6.0"
-go_ver="1.7"
+rbenv install 2.4.2
+rbenv global 2.4.2
 
-# Install Languages
-rbenv install ${rb_ver}
-rbenv global ${rb_ver}
-rbenv rehash
-pyenv install ${py_ver}
-pyenv global ${py_ver}
-pyenv rehash
-PHP_BUILD_CONFIGURE_OPTS="--with-openssl=$(brew --prefix openssl) --with-libxml-dir=$(brew --prefix libxml2)" PHP_BUILD_EXTRA_MAKE_ARGUMENTS=-j4 phpenv install ${php_ver}
-phpenv global ${php_ver}
-phpenv rehash
-ndenv install ${nd_ver}
-ndenv global ${nd_ver}
-ndenv rehash
-goenv install ${go_ver}
-goenv global ${go_ver}
-goenv rehash
-zsh -l
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+pyenv install 2.7.14
+pyenv install 3.6.2
+
+goenv install 1.9.0
+goenv global 1.9.0
+
+nodenv install 8.5.0
+nodnev global 8.5.0
