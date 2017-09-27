@@ -7,3 +7,4 @@ chpass -s /usr/local/bin/fish
 
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fish -c fisher
+fish -c fish_update_completions
